@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<testsuite tests="4" failures="0" name="com.abc.dataAccessObject.ProductImpTest" time="0.147" errors="0" skipped="0">
+<testsuite tests="4" failures="0" name="com.abc.dataAccessObject.ProductImpTest" time="0.17" errors="0" skipped="0">
   <properties>
     <property name="java.runtime.name" value="OpenJDK Runtime Environment"/>
     <property name="java.vm.version" value="17.0.13+11-adhoc.root.jdk17u"/>
@@ -54,7 +54,7 @@
     <property name="sun.cpu.endian" value="little"/>
     <property name="java.vendor.version" value="OpenLogic-OpenJDK"/>
   </properties>
-  <testcase classname="com.abc.dataAccessObject.ProductImpTest" name="createUserShouldWorkSuccessfully" time="0.027"/>
+  <testcase classname="com.abc.dataAccessObject.ProductImpTest" name="createUserShouldWorkSuccessfully" time="0.023"/>
   <testcase classname="com.abc.dataAccessObject.ProductImpTest" name="readUserShouldWorkSuccessfully" time="0"/>
   <testcase classname="com.abc.dataAccessObject.ProductImpTest" name="readDesciptionUserShouldWorkSuccessfully" time="0"/>
   <testcase classname="com.abc.dataAccessObject.ProductImpTest" name="readPriceUserShouldWorkSuccessfully" time="0"/>
