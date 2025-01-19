@@ -1,0 +1,22 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: "devops-igp"
+  namespace: "default"
+  labels:
+    app: "devops-igp"
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: "devops-igp"
+  template:
+    metadata:
+      labels:
+        app: "devops-igp"
+    spec:
+      containers:
+      - name: "devops-igp-deploy"
+        image: djvasanta33/devops-igp:latest
+        ports:
+        - containerPort: 8080

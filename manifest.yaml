@@ -1,0 +1,30 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: devops-igp
+  namespace: default
+  labels: {app: devops-igp, app.kubernetes.io/managed-by: graphite-jenkins-gke}
+spec:
+  replicas: 3
+  selector:
+    matchLabels: {app: devops-igp}
+  template:
+    metadata:
+      labels: {app: devops-igp}
+    spec:
+      containers:
+      - name: devops-igp-deploy
+        image: djvasanta33/devops-igp:latest
+        ports:
+        - {containerPort: 8080}
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: devops-igp-svc
+  labels: {app.kubernetes.io/managed-by: graphite-jenkins-gke}
+spec:
+  selector: {app: devops_igp}
+  ports:
+  - {protocol: TCP, port: 80, targetPort: 8080}
+  type: NodePort
